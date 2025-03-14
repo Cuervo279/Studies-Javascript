@@ -1,0 +1,81 @@
+body {
+  margin: 0;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(to bottom, #0a0a0a, #1a1a1a);
+  overflow: hidden;
+}
+
+.bnt {
+  top: 0px;
+  position: absolute;
+  margin-top: 3%;
+  display: flex;
+  width: 100px;
+  height: 50px;
+  background-color: crimson;
+  align-items: center;
+  justify-content: center;
+  z-index: 1;
+}
+
+.window {
+  position: relative;
+  width: 90%;
+  height: 90%;
+  background-color: rgba(255, 255, 255, 0.1);
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  overflow: hidden;
+}
+
+.mouse-area {
+  position: fixed;
+  /* background-color: rgba(255, 0, 0, 0.5); */
+  box-shadow: rgb(255, 0, 0) 0px 0px 10px;
+  /* border: 2px dashed rgba(255, 0, 0, 0.5); */
+  border-radius: 50%; /* Forma circular */
+  pointer-events: none; /* Impede que a área interfira com outros elementos */
+}
+
+
+.drop {
+  position: absolute;
+  /* background-image: url(./waterdrop.png); */
+  /* background-size: cover; */
+  background: linear-gradient(to bottom, rgba(0, 74, 109, 0.8), rgba(0, 162, 255, 0.637));
+  border-radius: 50% 50% 50% 50% / 60% 60% 40% 40%;
+  pointer-events: none;
+  animation: fall2 linear infinite;
+}
+
+
+@keyframes fall {
+  to {
+    transform: translateY(100vh);
+  }
+}
+
+@keyframes fall {
+  0% {
+    transform: translateY(-20px) translateX(-20px);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(600px) translateX(20px);
+    opacity: 0;
+  }
+}
+
+@keyframes slide {
+  0% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(10px);
+  }
+  100% {
+    transform: translateX(20px);
+  }
+}
